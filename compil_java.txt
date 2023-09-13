@@ -1,0 +1,3 @@
+javac -d bin -sourcepath src src/[nom fichier].java
+
+java -cp bin [nom fichier]
