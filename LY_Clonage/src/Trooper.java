@@ -11,7 +11,7 @@ public class Trooper
     @Override
     public String toString()
     {
-        String str = "Nom : " + this.nom + "\nIdentifiant : " + id + "\nNiveau de santé : " + this.nivSante;
+        String str = "[Trooper] Nom : " + this.nom + "\nIdentifiant : " + id + "\nNiveau de santé : " + this.nivSante;
                str +=  "\nArme : " + this.arme + "\nGrade : " + this.grade;
         return str;
     } 
