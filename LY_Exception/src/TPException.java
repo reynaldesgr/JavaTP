@@ -12,17 +12,16 @@ public class TPException
         // try-catch ou throws IllegalArgumentException / AutorisationException
         try
         {
-            
             //compte.retrait(-10);
             compte.retrait(900);
-
         }
         catch (IllegalArgumentException illegalArgException)
         {
             System.out.println("-- Illegal Arg. Exception --");
             System.out.println(illegalArgException.getMessage());
 
-        }catch(AutorisationException autorisationException)
+        }
+        catch(AutorisationException autorisationException)
         {
             System.out.println("-- Autorisation Arg. Exception --");
             System.out.println(autorisationException.getMessage());
