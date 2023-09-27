@@ -22,5 +22,15 @@ abstract public class Arme
         String str = "Nom : " + this.nom + "\n Num. Serie : " + this.numSerie;
         return str;
     }
+
+    public String getNom()
+    {
+        return String.copyValueOf(this.nom.toCharArray());
+    }
+
+    public int getNumSerie()
+    {
+        return this.numSerie;
+    }
 }
 
