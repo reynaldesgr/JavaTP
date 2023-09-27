@@ -1,3 +1,6 @@
 javac -d bin -sourcepath src src/[nom fichier].java
 
-java -cp bin [nom fichier]
+// si 2 classes dans des fichiers différents
+javac -d bin src/[nom fichier].java
+
+java -cp bin (src/)[nom fichier]

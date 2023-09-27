@@ -6,7 +6,7 @@ public class StringCMD
         if ( (t = arg.length) > 1){
             for (int i = 0; i < t; i++)
             {
-                System.out.println(arg[i]);
+                System.out.println("Param "+i+" : "+arg[i]);
             }
         }
     }
