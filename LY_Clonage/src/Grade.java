@@ -1,18 +1,27 @@
+package src;
+
 enum Grade
+{
+    Trooper
     {
-        TROOPER("Simple Soldat", "BLANC"),
-        SERGENT("Sergent", "VERT"),
-        LIEUTNANT("Lieutenant", "BLEU"),
-        CAPITAINE("Capitaine", "ROUGE"),
-        COMMANDANT("Commandant", "JAUNE");
+        public String getMarque() { return "WHITE"; }
+    },
+    SERGENT
+    {
+        public String getMarque() { return "GREEN"; }
+    },
+    LIEUTNANT
+    {
+        public String getMarque() { return "BLUE"; }
+    },
+    CAPITAINE 
+    {
+        public String getMarque() { return "RED"; }
+    },
+    COMMANDEUR
+    {
+        public String getMarque() { return "YELLOW"; }
+    };
 
-        private String nom;
-        private String couleur;
-
-        Grade(String nom, String couleur)
-        {
-            this.nom     = nom;
-            this.couleur = couleur;
-        }
-
-    }
+    abstract public String getMarque();
+}

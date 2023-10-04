@@ -1,3 +1,4 @@
+package src;
 public class Fusil extends Arme
 {
     Fusil(String nom, int numSerie)

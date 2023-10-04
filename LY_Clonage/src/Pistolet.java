@@ -1,3 +1,4 @@
+package src;
 public class Pistolet extends Arme 
 {
     Pistolet(String nom, int numSerie)

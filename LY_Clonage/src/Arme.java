@@ -1,4 +1,4 @@
-
+package src;
 abstract public class Arme
 {
     private String nom;
@@ -19,7 +19,7 @@ abstract public class Arme
     @Override
     public String toString()
     {
-        String str = "Nom : " + this.nom + "\n Num. Serie : " + this.numSerie;
+        String str = "Nom : " + this.nom + "\nNum. Serie : " + this.numSerie;
         return str;
     }
 
