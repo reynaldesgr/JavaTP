@@ -10,4 +10,17 @@ public class Fusil extends Arme
     {
         super(nom);
     }
+
+    Fusil()
+    {
+        super("Fusil");
+    }
+
+    @Override
+    public String toString()
+    {
+        String str = "Nom : " + super.nom + "\nNum. Serie : " + this.numSerie;
+        return str;
+    }
+
 }

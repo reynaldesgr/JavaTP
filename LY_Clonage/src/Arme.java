@@ -1,8 +1,11 @@
 package src;
-abstract public class Arme
+
+import java.util.Random;
+
+abstract public class Arme implements Cloneable
 {
-    private String nom;
-    private int    numSerie;
+    protected String nom;
+    protected int    numSerie;
 
     Arme(String nom, int numSerie)
     {
@@ -12,9 +15,11 @@ abstract public class Arme
 
     Arme(String nom)
     {
+        Random r      = new Random();
         this.nom      = nom;
-        this.numSerie = 1;
+        this.numSerie = r.nextInt(100);
     }
+
 
     @Override
     public String toString()
@@ -31,6 +36,27 @@ abstract public class Arme
     public int getNumSerie()
     {
         return this.numSerie;
+    }
+
+    public void setNumSerie(int numSerie)
+    {
+        this.numSerie = numSerie;
+    }
+
+    @Override 
+    public Object clone()
+    {
+        Arme object = null;
+        try
+        {
+            object = (Arme) super.clone();
+            
+        }
+        catch (CloneNotSupportedException cnse)
+        {
+            cnse.printStackTrace(System.err);
+        }
+        return object;
     }
 }
 

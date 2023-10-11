@@ -19,15 +19,13 @@ public class Trooper implements Cloneable
     } 
 
 
-    Trooper(String nom, int nivSante, Arme arme, Grade grade)
+    Trooper(String nom, int nivSante,  Grade grade)
     {
         this.nom        = nom;
+        this.arme       = Math.random() > 0.5 ? new Pistolet() : new Fusil();
         this.nivSante   = nivSante;
-        this.arme       = arme;
         this.grade      = grade;
-        this.id         = cpt;
-
-        cpt++;
+        this.id         = ++cpt;
     }
 
     @Override
@@ -38,8 +36,7 @@ public class Trooper implements Cloneable
         {
             object = (Trooper) super.clone();
             System.out.println("Clone de Jango Felt #"+ id);
-
-            this.id = cpt;
+            object.id = ++cpt;
             
         }
         catch (CloneNotSupportedException cnse)
@@ -49,17 +46,25 @@ public class Trooper implements Cloneable
         return object;
     }
 
-    /*Trooper(Trooper trooperToClone)
+    public void setNom(String nom)
     {
-        this.nom        = trooperToClone.nom;
-        this.nivSante   = trooperToClone.nivSante;
-        this.arme       = trooperToClone.arme;
-        this.grade      = trooperToClone.grade;
+        this.nom = nom;
+    }
 
-        System.out.println("Clone de Jango Felt #"+trooperToClone.id);
-        cpt++;
+    public void setNiveauSante(int nivSante)
+    {
+        this.nivSante = nivSante;
+    }
 
-        this.id = cpt;
-    }*/
+    public void setArme(Arme a)
+    {
+        this.arme = a;
+    }
+
+    public Arme getArme()
+    {
+        return this.arme;
+    }
+
 
 }

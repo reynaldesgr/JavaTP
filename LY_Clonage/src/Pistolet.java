@@ -10,4 +10,9 @@ public class Pistolet extends Arme
     {
         super(nom);
     }
+
+    Pistolet()
+    {
+        super("Pistolet");
+    }
 }
